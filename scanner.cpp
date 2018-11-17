@@ -987,7 +987,7 @@ YY_RULE_SETUP
 case 2:
 YY_RULE_SETUP
 #line 22 "lexico.l"
-{return yy::calculadora_parser::make_terminar(loc);}
+{return yy::calculadora_parser::make_termino(loc);}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
@@ -997,7 +997,7 @@ YY_RULE_SETUP
 case 4:
 YY_RULE_SETUP
 #line 24 "lexico.l"
-{return yy::calculadora_parser::make_COLOR(loc);}
+{return yy::calculadora_parser::make_color(loc);}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
@@ -1052,22 +1052,22 @@ YY_RULE_SETUP
 case 15:
 YY_RULE_SETUP
 #line 35 "lexico.l"
-{return yy::calculadora_parser::make_PARABIER(loc);}
+{return yy::calculadora_parser::make_parabier(loc);}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
 #line 36 "lexico.l"
-{return yy::calculadora_parser::make_PARACER(loc);}
+{return yy::calculadora_parser::make_paracer(loc);}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
 #line 37 "lexico.l"
-{return yy::calculadora_parser::make_COMA(loc);}
+{return yy::calculadora_parser::make_coma(loc);}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
 #line 38 "lexico.l"
-{return yy::calculadora_parser::make_IGUAL(loc);}
+{return yy::calculadora_parser::make_igual(loc);}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP

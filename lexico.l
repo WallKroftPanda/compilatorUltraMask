@@ -19,9 +19,9 @@ ID {LETRA}({LETRA}|{DIGITO}|"_")*
 DELIMITADOR [\t\r\f" "]
 %%
 "editar"    {return yy::calculadora_parser::make_editar(loc);}
-"termino"   {return yy::calculadora_parser::make_terminar(loc);}
+"termino"   {return yy::calculadora_parser::make_termino(loc);}
 "davalor"   {return yy::calculadora_parser::make_davalor(loc);}
-"color"     {return yy::calculadora_parser::make_COLOR(loc);}
+"color"     {return yy::calculadora_parser::make_color(loc);}
 "pos"  	    {return yy::calculadora_parser::make_pos(loc);}
 "aba"       {return yy::calculadora_parser::make_aba(loc);}
 "arr"       {return yy::calculadora_parser::make_arr(loc);}
@@ -32,10 +32,10 @@ DELIMITADOR [\t\r\f" "]
 "azul"      {return yy::calculadora_parser::make_azul(loc);}
 "amarillo"  {return yy::calculadora_parser::make_amarillo(loc);}
 "blanco"    {return yy::calculadora_parser::make_blanco(loc);}
-"("        {return yy::calculadora_parser::make_PARABIER(loc);}
-")"         {return yy::calculadora_parser::make_PARACER(loc);}
-","         {return yy::calculadora_parser::make_COMA(loc);}
-"="         {return yy::calculadora_parser::make_IGUAL(loc);}
+"("        {return yy::calculadora_parser::make_parabier(loc);}
+")"         {return yy::calculadora_parser::make_paracer(loc);}
+","         {return yy::calculadora_parser::make_coma(loc);}
+"="         {return yy::calculadora_parser::make_igual(loc);}
 {NUM}    {return yy::calculadora_parser::make_NUM(strtol(yytext, NULL, 10),loc);}
 {ID}        {return yy::calculadora_parser::make_ID(yytext,loc);}
 "\n"        {linea++;}
