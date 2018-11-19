@@ -1,15 +1,19 @@
 #include <stdio.h>
 #include "driver.h"
+#include <iostream>
+#include <string.h>
 
 int main()
 {
-  float resultado = 0.0;
   calculadora_driver driver;
-  if(driver.parse("entrada.txt")){
+  if(driver.parse("start"))
+  {
     printf("La entrada es incorrecta\n");
-  }else{
+  }
+  else{
     printf("La entrada es correcta\n");
     //printf("Resultado = %f\n",driver.resultado);
   }
+  
   return 0;
 }

@@ -44,9 +44,25 @@
 
 #include <string>
 #include <stdio.h>
+#include "miniwin.h"
+#include <vector>
 class calculadora_driver;
+void positio(float x, float y);
+void saveNum(std::string a, float x);
+float searchNum();
+void setColor();
+std::string searchColor();
+void up(float dir);
+void down(float dir);
+void left(float dir);
+void right(float dir);
+void paintRed();
+void paintBlue();
+void paintGreen();
+void paintYellow();
+void paintWhite();
 
-#line 50 "parser.tab.hh" // lalr1.cc:377
+#line 66 "parser.tab.hh" // lalr1.cc:377
 
 # include <cassert>
 # include <cstdlib> // std::abort
@@ -123,7 +139,7 @@ class calculadora_driver;
 
 #line 6 "parser.yy" // lalr1.cc:377
 namespace yy {
-#line 127 "parser.tab.hh" // lalr1.cc:377
+#line 143 "parser.tab.hh" // lalr1.cc:377
 
 
 
@@ -291,7 +307,19 @@ namespace yy {
     union union_type
     {
       // "NUM"
-      // S
+      // INICIO
+      // finish
+      // inst
+      // inst_color
+      // inst_pos_xy
+      // inst_der
+      // inst_izq
+      // inst_arr
+      // inst_abj
+      // inst_dvalor
+      // DATO
+      // COL
+      // X
       char dummy1[sizeof(float)];
 
       // "ID"
@@ -736,9 +764,9 @@ namespace yy {
     enum
     {
       yyeof_ = 0,
-      yylast_ = 55,     ///< Last index in yytable_.
+      yylast_ = 54,     ///< Last index in yytable_.
       yynnts_ = 14,  ///< Number of nonterminal symbols.
-      yyfinal_ = 19, ///< Termination state number.
+      yyfinal_ = 18, ///< Termination state number.
       yyterror_ = 1,
       yyerrcode_ = 256,
       yyntokens_ = 23  ///< Number of tokens.
@@ -821,7 +849,19 @@ namespace yy {
       switch (other.type_get ())
     {
       case 22: // "NUM"
-      case 25: // S
+      case 24: // INICIO
+      case 25: // finish
+      case 26: // inst
+      case 27: // inst_color
+      case 28: // inst_pos_xy
+      case 29: // inst_der
+      case 30: // inst_izq
+      case 31: // inst_arr
+      case 32: // inst_abj
+      case 33: // inst_dvalor
+      case 34: // DATO
+      case 35: // COL
+      case 36: // X
         value.copy< float > (other.value);
         break;
 
@@ -847,7 +887,19 @@ namespace yy {
       switch (this->type_get ())
     {
       case 22: // "NUM"
-      case 25: // S
+      case 24: // INICIO
+      case 25: // finish
+      case 26: // inst
+      case 27: // inst_color
+      case 28: // inst_pos_xy
+      case 29: // inst_der
+      case 30: // inst_izq
+      case 31: // inst_arr
+      case 32: // inst_abj
+      case 33: // inst_dvalor
+      case 34: // DATO
+      case 35: // COL
+      case 36: // X
         value.copy< float > (v);
         break;
 
@@ -911,7 +963,19 @@ namespace yy {
     switch (yytype)
     {
       case 22: // "NUM"
-      case 25: // S
+      case 24: // INICIO
+      case 25: // finish
+      case 26: // inst
+      case 27: // inst_color
+      case 28: // inst_pos_xy
+      case 29: // inst_der
+      case 30: // inst_izq
+      case 31: // inst_arr
+      case 32: // inst_abj
+      case 33: // inst_dvalor
+      case 34: // DATO
+      case 35: // COL
+      case 36: // X
         value.template destroy< float > ();
         break;
 
@@ -943,7 +1007,19 @@ namespace yy {
       switch (this->type_get ())
     {
       case 22: // "NUM"
-      case 25: // S
+      case 24: // INICIO
+      case 25: // finish
+      case 26: // inst
+      case 27: // inst_color
+      case 28: // inst_pos_xy
+      case 29: // inst_der
+      case 30: // inst_izq
+      case 31: // inst_arr
+      case 32: // inst_abj
+      case 33: // inst_dvalor
+      case 34: // DATO
+      case 35: // COL
+      case 36: // X
         value.move< float > (s.value);
         break;
 
@@ -1142,7 +1218,7 @@ namespace yy {
 
 #line 6 "parser.yy" // lalr1.cc:377
 } // yy
-#line 1146 "parser.tab.hh" // lalr1.cc:377
+#line 1222 "parser.tab.hh" // lalr1.cc:377
 
 
 

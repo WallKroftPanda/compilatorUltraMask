@@ -594,9 +594,9 @@ int yy_flex_debug = 1;
 
 static yyconst flex_int16_t yy_rule_linenum[24] =
     {   0,
-       21,   22,   23,   24,   25,   26,   27,   28,   29,   30,
-       31,   32,   33,   34,   35,   36,   37,   38,   39,   40,
-       41,   43,   44
+       22,   23,   24,   25,   26,   27,   28,   29,   30,   31,
+       32,   33,   34,   35,   36,   37,   38,   39,   40,   41,
+       42,   44,   45
     } ;
 
 /* The intent behind this definition is that it'll catch
@@ -617,8 +617,9 @@ char *yytext;
 #undef yywrap
 #define yywrap() 1
 static yy::location loc;
+int linea = 0;
 #define YY_NO_INPUT 1
-#line 622 "scanner.cpp"
+#line 623 "scanner.cpp"
 
 #define INITIAL 0
 
@@ -901,9 +902,9 @@ YY_DECL
 
 	{
 /* %% [7.0] user's declarations go here */
-#line 20 "lexico.l"
+#line 21 "lexico.l"
 
-#line 907 "scanner.cpp"
+#line 908 "scanner.cpp"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -981,130 +982,130 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 21 "lexico.l"
+#line 22 "lexico.l"
 {return yy::calculadora_parser::make_editar(loc);}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 22 "lexico.l"
+#line 23 "lexico.l"
 {return yy::calculadora_parser::make_termino(loc);}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 23 "lexico.l"
+#line 24 "lexico.l"
 {return yy::calculadora_parser::make_davalor(loc);}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 24 "lexico.l"
+#line 25 "lexico.l"
 {return yy::calculadora_parser::make_color(loc);}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 25 "lexico.l"
+#line 26 "lexico.l"
 {return yy::calculadora_parser::make_pos(loc);}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 26 "lexico.l"
+#line 27 "lexico.l"
 {return yy::calculadora_parser::make_aba(loc);}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 27 "lexico.l"
+#line 28 "lexico.l"
 {return yy::calculadora_parser::make_arr(loc);}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 28 "lexico.l"
+#line 29 "lexico.l"
 {return yy::calculadora_parser::make_izq(loc);}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 29 "lexico.l"
+#line 30 "lexico.l"
 {return yy::calculadora_parser::make_der(loc);}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 30 "lexico.l"
+#line 31 "lexico.l"
 {return yy::calculadora_parser::make_rojo(loc);}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 31 "lexico.l"
+#line 32 "lexico.l"
 {return yy::calculadora_parser::make_verde(loc);}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 32 "lexico.l"
+#line 33 "lexico.l"
 {return yy::calculadora_parser::make_azul(loc);}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 33 "lexico.l"
+#line 34 "lexico.l"
 {return yy::calculadora_parser::make_amarillo(loc);}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 34 "lexico.l"
+#line 35 "lexico.l"
 {return yy::calculadora_parser::make_blanco(loc);}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 35 "lexico.l"
+#line 36 "lexico.l"
 {return yy::calculadora_parser::make_parabier(loc);}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 36 "lexico.l"
+#line 37 "lexico.l"
 {return yy::calculadora_parser::make_paracer(loc);}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 37 "lexico.l"
+#line 38 "lexico.l"
 {return yy::calculadora_parser::make_coma(loc);}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 38 "lexico.l"
+#line 39 "lexico.l"
 {return yy::calculadora_parser::make_igual(loc);}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 39 "lexico.l"
+#line 40 "lexico.l"
 {return yy::calculadora_parser::make_NUM(strtol(yytext, NULL, 10),loc);}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 40 "lexico.l"
+#line 41 "lexico.l"
 {return yy::calculadora_parser::make_ID(yytext,loc);}
 	YY_BREAK
 case 21:
 /* rule 21 can match eol */
 YY_RULE_SETUP
-#line 41 "lexico.l"
+#line 42 "lexico.l"
 {linea++;}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 43 "lexico.l"
+#line 44 "lexico.l"
 {}
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 44 "lexico.l"
+#line 45 "lexico.l"
 {printf("ERROR LEXICO %s\n",yytext);}
 	YY_BREAK
 case YY_STATE_EOF(INITIAL):
-#line 45 "lexico.l"
+#line 46 "lexico.l"
 {return yy::calculadora_parser::make_FIN(loc);}
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 46 "lexico.l"
+#line 47 "lexico.l"
 ECHO;
 	YY_BREAK
-#line 1108 "scanner.cpp"
+#line 1109 "scanner.cpp"
 
 	case YY_END_OF_BUFFER:
 		{
@@ -2207,7 +2208,7 @@ void yyfree (void * ptr )
 
 /* %ok-for-header */
 
-#line 46 "lexico.l"
+#line 47 "lexico.l"
 
 
 void calculadora_driver::iniciarScanner()

@@ -7,6 +7,7 @@
 #undef yywrap
 #define yywrap() 1
 static yy::location loc;
+int linea = 0;
 %}
 %option noyywrap nounput batch debug noinput
 %option outfile="scanner.cpp"
