@@ -99,7 +99,7 @@ inst : inst_color
 inst_color : color parabier ID paracer 
             |color parabier COL paracer;
 
-inst_pos_xy : pos parabier X coma X paracer {positio($3,$3);}
+inst_pos_xy : pos parabier X coma X paracer {positio($3,$5);}
 
 inst_der : der parabier X paracer {right($3);}
 
@@ -109,10 +109,10 @@ inst_arr : arr parabier X paracer {up($3);}
 
 inst_abj : aba parabier X paracer {down($3);}
 
-inst_dvalor : davalor ID igual DATO;
+inst_dvalor : davalor ID igual DATO {$2=$4;};
 
 DATO : COL
-      | NUM;
+      | NUM{$$=$1;};
 
 COL : rojo {paintRed();}
       | azul {paintBlue();}
@@ -127,7 +127,9 @@ X : ID
 void positio(float x, float y)
 {
       px = x;
+                        std::cout<< x <<std::endl;
       py = y;
+                        std::cout<< y <<std::endl;
 }
 void saveNum(std::string a, float x)
 {     
@@ -184,25 +186,25 @@ std::string searchColor(std::string Com)
 }
 
 void up(float dir){
-  dir=dir*30;
+  dir=dir*55;
 	miniwin::linea(px,py,px,py-dir);
 	miniwin::refresca();
 	py=py-dir;
 }
 void right(float dir){
-  dir=dir*30;
+  dir=dir*55;
   miniwin::linea(px,py,px+dir,py);
   miniwin::refresca();
   px=px+dir;
 }
 void left(float dir){
-  dir=dir*30;
+  dir=dir*55;
   miniwin::linea(px,py,px-dir,py);
   miniwin::refresca();
   px=px-dir;  
 }
 void down(float dir){
-  dir=dir*30;
+  dir=dir*55;
   miniwin::linea(px,py,px,py+dir);
   miniwin::refresca();
   py=py+dir;
@@ -233,4 +235,5 @@ void paintWhite(){
 void yy::calculadora_parser::error(const location_type& lugar, const std::string& lexema)
 {
   std::cout << "Error Sintactico " << lexema << std::endl;
+  exit(0);
 }
